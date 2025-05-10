@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="الإعدادات"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <!-- عناصر الإعدادات -->
+        <TextView
+            android:id="@+id/btnPrivacy"
+            style="@style/SettingItem"
+            android:text="@string/privacy" />
+
+        <TextView
+            android:id="@+id/btnLanguage"
+            style="@style/SettingItem"
+            android:text="@string/language" />
+
+        <TextView
+            android:id="@+id/btnFaq"
+            style="@style/SettingItem"
+            android:text="@string/faq" />
+
+        <TextView
+            android:id="@+id/btnHelp"
+            style="@style/SettingItem"
+            android:text="@string/help" />
+        <TextView
+            android:id="@+id/btnNotification"
+            style="@style/SettingItem"
+            android:text="@string/notifications" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="0dp">
+
+    <!-- ✅ الشريط العلوي -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/back2"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:layout_alignParentStart="true"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <!-- ✅ البطاقة المختصرة للوظيفة -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/card"
+        android:layout_marginHorizontal="16dp" >
+
+
+
+        <!-- الوقت -->
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 min"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="6dp"
+            android:drawableLeft="@drawable/earth"
+            android:textColor="#888"
+            android:textSize="12sp" />
+        
+
+        <!-- العنوان -->
+
+        <!-- معلومات الشركة -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="30dp"
+            android:text="Web and Mobile Development"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="28dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imageCompany"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_company"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/textCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PURE for IT Solutions"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="103dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/share2" />
+
+                <ImageView
+                    android:id="@+id/imgBookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/bookmark" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- أيقونات (حفظ، مشاركة،... إلخ) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="58dp"
+            android:layout_marginTop="1dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="(1012416)">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/eye"
+                android:text="21 k">
+            </TextView>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp"
+            android:background="#FFFFFF">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- 🔹 Job Type -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/details"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Job Type:"
+                        android:textColor="#4CB4B4"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textJobType"
+                        android:text="100$ - 250$"
+                        android:textColor="#000"
+                        android:layout_marginLeft="200dp"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- 🔹 Work Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/details"                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Work Field:"
+                        android:textColor="#4CB4B4"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textWorkField"
+                        android:text="Information Technology"
+                        android:textColor="#000"
+                        android:layout_marginLeft="125dp"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- 🔹 Country of Employment -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/details"                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Country of Employment:"
+                        android:textColor="#4CB4B4"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/imageFlag"
+                        android:layout_width="24dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/kuwait"
+                        android:paddingRight="6dp"
+                        android:layout_marginLeft="120dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/textCountry"
+                        android:text="Kuwait"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:paddingLeft="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- 🔹 Salary -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/details"                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Salary / Wage:"
+                        android:textColor="#4CB4B4"
+                        android:textStyle="bold"
+
+                        android:textSize="14sp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textSalary"
+                        android:text="2.5K - 5K KWD / Month"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="110dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- 🔹 Experience -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/details"                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Required Experience:"
+                        android:textColor="#4CB4B4"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textExperience"
+                        android:text="2 – 5 Years"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="138dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ✅ قسم المهارات Skills -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Skills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutSkills"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/skills"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="java"
+                        android:gravity="center"
+                        android:background="@drawable/skill_tag_background"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CB4B4"
+                        android:layout_height="30dp">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="java Script"
+                        android:gravity="center"
+                        android:background="@drawable/skill_tag_background"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#4CB4B4"
+                        android:layout_height="30dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:text="Bootstrap"
+                        android:gravity="center"
+                        android:background="@drawable/skill_tag_background"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="15dp"
+                        android:textStyle="bold"
+                        android:textColor="#4CB4B4"
+                        android:layout_height="30dp">
+
+                    </TextView>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!-- ✅ قسم Job Description -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Job Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/details"                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/textDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy euismod tempor."
+                        android:textSize="14sp"
+                        android:textColor="#444" />
+
+                    <TextView
+                        android:id="@+id/textReadMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Read More"
+                        android:textColor="#4CB4B4"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- ✅ قسم Candidate Requirements -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Candidate Requirements"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- 🔹 Nationality -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/details"                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Nationality:"
+                        android:textColor="#4CB4B4"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/textNationality"
+                        android:text="Kuwait, Palestinian, Indian"
+                        android:textColor="#000"
+                        android:layout_marginLeft="100dp"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- 🔹 Country Residence -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/details"                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Country Residence:"
+                        android:textColor="#4CB4B4"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/textResidence"
+                        android:text="Egypt, Jordan, India"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="90dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- 🔹 Gender -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/details"                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:text="Gender:"
+                        android:textColor="#4CB4B4"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/textGender"
+                        android:text="All"
+                        android:textColor="#000"
+                        android:layout_marginLeft="270dp"
+
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ✅ زر Apply -->
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Apply"
+                android:layout_margin="16dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/apply"
+                android:layout_gravity="center_horizontal" />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
